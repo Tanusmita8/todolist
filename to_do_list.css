@@ -1,0 +1,123 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0 2%;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+input[type="text"], button {
+    padding: 0.8rem;
+    margin: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 400px;
+}
+
+#todoList li {
+    background-color: #fff;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.2s;
+}
+
+#todoList li:hover {
+    background-color: #eee;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Dark mode adjustments */
+body.dark-mode header {
+    background-color: #1E2A38;
+}
+
+body.dark-mode #todoList li {
+    background-color: #444;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+    
+    input[type="text"], button {
+        width: 90%;
+    }
+    
+    #todoList {
+        width: 90%;
+    }
+    
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    input[type="text"], button {
+        width: 95%;
+        padding: 0.5rem;
+    }
+
+    #todoList li {
+        padding: 0.5rem;
+    }
+    
+    footer {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+}
